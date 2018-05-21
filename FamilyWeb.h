@@ -8,16 +8,24 @@ strust SurnameDir
        
 };
 
+
+
 struct FamilyPage
 {
-       WebPage family_page;
+  struct FamilyPageInfo
+  {
+  };
+       WebPage page;
        
        
 };
 
 struct MemberPage
 {
-       WebPage family_page;
+  struct MemberPageInfo
+  {
+  };
+       WebPage page;
        
        
 };
