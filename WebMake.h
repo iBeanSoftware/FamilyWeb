@@ -1,5 +1,6 @@
 #include "UTF-8_String.h"
-// not stable
+
+// **CAUSION** WebMake.h is not stable at this point 
 
 struct PageInfo
 {
