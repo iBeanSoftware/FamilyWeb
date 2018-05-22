@@ -22,8 +22,7 @@ struct MemberPage
          iBS::u8text other_info;
   };
        WebPage page;
-       
-       
+ //bool add_member_page(){};
 };
 
 struct EventPage
@@ -37,8 +36,9 @@ struct EventPage
               iBS::u8str f_member_name;
               iBS::u8text other_info;
        };
+       WebPage page;
+ //bool add_event_page(){};
 };
-
 
 struct FamilyPage
 {
@@ -52,8 +52,6 @@ struct FamilyPage
          
   };
        WebPage page;
-       
-       
-       
+      //bool add_family_page(){};
 };
 
