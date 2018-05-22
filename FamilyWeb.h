@@ -3,7 +3,7 @@
 strust SurnameDir
 {
        u8str surname;
-       u8str dir;
+       u8str root_path;
   //...     
        
 };
