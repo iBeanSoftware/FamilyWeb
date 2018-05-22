@@ -1,6 +1,10 @@
+//--------------------------------------------------
+// **CAUSION** WebMake.h is not stable at this point 
+//--------------------------------------------------
+
 #include "UTF-8_String.h"
 
-// **CAUSION** WebMake.h is not stable at this point 
+using namespace iBS;
 
 struct PageInfo
 {
