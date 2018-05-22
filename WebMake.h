@@ -41,7 +41,11 @@ struct WebPage
               result.append("<footer>");
               result.append(footer);
               result.append("</footer>");
- 
+              
+              //todo
+              // add function u8text::save2file(u8str filePath);
+              // result.save2file(filePath);
+              return result;
        };
       u8text make_page(u8str filePath, u8text h, u8text b, u8text f)
        {
