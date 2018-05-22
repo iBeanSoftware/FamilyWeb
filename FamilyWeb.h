@@ -19,6 +19,7 @@ struct MemberPage
          iBS::u8str DoB, DoD;
          iBS::u8str birth_place;
          iBS::u8str fathers_name, mothers_name;
+         SurnameDir root_dir;
          iBS::u8text other_info;
   };
        WebPage page;
@@ -34,6 +35,7 @@ struct EventPage
               iBS::u8str event_type;
               iBS::u8str m_member_name;
               iBS::u8str f_member_name;
+              SurnameDir root_dir;
               iBS::u8text other_info;
        };
        WebPage page;
@@ -44,6 +46,7 @@ struct FamilyPage
 {
   struct FamilyPageInfo
   {
+         SurnameDir root_dir;
          iBS::u8str family_pic_link;
          iBS::u8str fathers_fathers_name, fathers_mothers_name;
          iBS::u8str mothers_fathers_name, mothers_mothers_name;
