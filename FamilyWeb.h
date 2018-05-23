@@ -6,14 +6,19 @@ strust SurnameDir
 {
        iBS::u8str surname;
        iBS::u8str root_path;
+       
+       iBS::u8str getFullPath()
+       {
+              return (root_path +"//" +surname+"//" );
+       };
   //...     
        
 };
 
 struct MemberPage
 {
-  struct MemberPageInfo
-  {
+    struct MemberPageInfo
+    {
          iBS::u8str profile_pic_link;
          iBS::u8str prefix, first_name, middle_name, last_name, sufix;
          iBS::u8str DoB, DoD;
@@ -21,8 +26,24 @@ struct MemberPage
          iBS::u8str fathers_name, mothers_name;
          SurnameDir root_dir;
          iBS::u8text other_info;
-  };
-       WebPage page;
+    };
+       
+    WebPage page;
+       
+    void populate_page()
+    {
+        page.head.append("<style> .image10p {width: 10%;}</style>");
+           
+        page.body.append("<h1>" + last_name+" "+sufix+", "+prefix+" "+first_name+" "+middle_name + "</h1>");  
+        page.body.append("<h2> Parents </h2>");
+        page.body.append("<p> Father: "+fathers_name +"</p>");
+        page.body.append("<p> Mother: "+mothers_name +"</p>");
+        page.body.append("<img class=\"image10p\" src=/""+ profile_pic_link +"\" alt=\"Member Image\">");
+           page.body.append();
+           page.body.append();
+           page.body.append();
+           page.body.append();
+    };   
  //bool add_member_page(){};
 };
 
