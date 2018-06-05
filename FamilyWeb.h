@@ -27,13 +27,13 @@ struct MemberPage
          iBS::u8str profile_pic_link;
          iBS::u8str prefix, first_name, middle_name, last_name, sufix;
          iBS::u8str DoB, DoD;
-         iBS::u8str birth_place;
+         iBS::u8str birth_place; // yyyymmdd
          iBS::u8str death_place;
          iBS::u8str fathers_name, mothers_name;
-         SurnameDir root_dir;
          iBS::u8text other_info;
     };
     MemberInfo info;   
+    SurnameDir sir_dir;
     WebPage page;
        
     void populate_page()
@@ -61,7 +61,6 @@ struct EventPage
 {
        struct EventInfo
        {
-              SurnameDir root_dir;
               iBS::u8str event_pic_link;
               iBS::u8str event_date;
               iBS::u8str event_type;
@@ -71,6 +70,7 @@ struct EventPage
        };
        
        EventInfo info;
+       SurnameDir sur_dir;
        WebPage page;
        void populate_page()
        {
@@ -89,9 +89,8 @@ struct EventPage
 
 struct FamilyPage
 {
-  struct FamilyPageInfo
+  struct FamilyInfo
   {
-         SurnameDir root_dir;
          iBS::u8str family_pic_link;
          iBS::u8str fathers_fathers_name, fathers_mothers_name;
          iBS::u8str mothers_fathers_name, mothers_mothers_name;
@@ -99,6 +98,8 @@ struct FamilyPage
          iBS::u8text children_names;
          
   };
+       FamilyInfo info;
+       SurnameDir sur_dir;
        WebPage page;
       //bool add_family_page(){};
 };
