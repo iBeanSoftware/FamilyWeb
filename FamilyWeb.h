@@ -50,7 +50,7 @@ struct MemberPage
         page.body.append("<p> Date of Birth: "+info.DoB+" </p>");
         page.body.append("<p> Place of Birth: "+info.birth_place+" </p>");
         page.body.append("<p> Date of Death: "+info.DoD+" </p>");
-        page.body.append("<p> Place of Death: "+info.birth_place+" </p>");
+        page.body.append("<p> Place of Death: "+info.death_place+" </p>");
         page.body.append();
     };   
  //void init(){};
