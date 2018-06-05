@@ -1,7 +1,6 @@
 #include "../iBS_LIB/UTF-8_String.h"
 #include "WebMake.h"
 
-
 strust SurnameDir
 {
        iBS::u8str surname;
@@ -13,6 +12,12 @@ strust SurnameDir
        };
   //...     
        
+};
+
+struct IndexPage
+{
+       SurnameDir sur_dir;
+       iBS::u8text name_list;
 };
 
 struct MemberPage
