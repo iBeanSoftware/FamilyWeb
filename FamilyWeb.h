@@ -60,7 +60,8 @@ struct EventPage
               iBS::u8str event_pic_link;
               iBS::u8str event_date;
               iBS::u8str event_type;
-              iBS::u8str member_name;
+              iBS::u8str member_name1;
+              iBS::u8str member_name2;
               iBS::u8text other_info;
        };
        
