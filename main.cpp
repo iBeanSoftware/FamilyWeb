@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 void MinuLoop()
 {
   bool exit_flag = false;
-  u8str anser = u8str();
+  u8str anser = u8str(); // varible type found in iBS LIB in UTF-8_String.h included in WebMake.h
   
   do{
     cout << endl<< endl<< "Family Web Minu << endl<< endl;
