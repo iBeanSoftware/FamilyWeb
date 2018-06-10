@@ -101,6 +101,32 @@ struct FamilyPage
        FamilyInfo info;
        SurnameDir sur_dir;
        WebPage page;
+       
+       void populate_page()
+       {
+        page.head.append("<style> .image10p {width: 10%;}</style>");
+           
+        page.body.append("<h1>" + info.fathers_name+" & "+info.mothers_name+ "</h1>");  
+        page.body.append("<img class=\"image10p\" src=/""+ profile_pic_link +"\" alt=\"Member Image\">");
+        page.body.append("<p> </p>");
+        page.body.append("<h2> Grand Parents </h2>");
+        page.body.append("<p> Father's Father: "+info.fathers_fathers_name +"</p>");
+        page.body.append("<p> Father's Mother: "+info.fathers_mothers_name +"</p>");
+        page.body.append("<p> </p>");
+        page.body.append("<p> Mother's Father: "+info.mothers_fathers_name +"</p>");
+        page.body.append("<p> Mother's Mother: "+info.mothers_mothers_name +"</p>");
+        page.body.append("<p> </p>");
+        page.body.append("<h2> Parents </h2>");
+        page.body.append("<p> Father: "+info.fathers_name +"</p>");
+        page.body.append("<p> Mother: "+info.mothers_name +"</p>");
+        page.body.append("<p> </p>");
+        page.body.append("<h2> Children </h2>");
+        for(int i=0; i<other_info.count; i++)
+              {
+              page.body.append("<p> "+children_names[i]+" </p>");
+              }
+       };   
+
       //bool add_family_page(){};
 };
 
