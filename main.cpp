@@ -45,8 +45,8 @@ void MinuLoop()
     else if(anser=='B' || anser=='b' ||anser=="build" || anser=="Build Index" || anser=="Build" || anser=="Build Index")
       BuildIndex();
     else if(anser=='X' || anser=='x' ||anser=="exit" || anser=="Exit"|| anser=="quit" || anser=="Quit")
-      exit_flag = true;;
-  }while(!exit_flag)
+      exit_flag = true;
+  }while(!exit_flag);
 };
 //--------------------------------------------
 void AddPerson()
@@ -147,7 +147,7 @@ void AddFamily()
             cin >> anser;
             page.info.children_names.append(anser);
         }
-    }while(more_children_flag)
+    }while(more_children_flag);
 
         
     page.populate_page();
