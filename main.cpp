@@ -101,7 +101,58 @@ void AddPerson()
 
 };
 //--------------------------------------------
-void AddFamily();
+void AddFamily()
+{
+    u8str anser;
+    FamilyPage page = FamilyPage();
+    
+             iBS::u8str ;
+         iBS::u8str fathers_fathers_name, fathers_mothers_name;
+         iBS::u8str mothers_fathers_name, mothers_mothers_name;
+         iBS::u8str fathers_name, mothers_name;
+         iBS::u8text children_names;
+
+    
+    cout << "Enter Link to picture:"<< endl;
+    cin >> anser;
+    page.info.family_pic_link = anser;
+    cout << "Enter Father's Name:"<< endl;
+    cin >> anser;
+    page.info.fathers_name = anser;
+    cout << "Enter Father's Father's Name:"<< endl;
+    cin >> anser;
+    page.info.fathers_fathers_name = anser;
+    cout << "Enter Father's Mother's Name:"<< endl;
+    cin >> anser;
+    page.info.fathers_mothers_name = anser;
+    cout << "Enter Mother's Name:"<< endl;
+    cin >> anser;
+    page.info.mothers_name = anser;
+    cout << "Enter Mother's Father's Name:"<< endl;
+    cin >> anser;
+    page.info.mothers_fathers_name = anser;
+    cout << "Enter Mother's Mother's Name:"<< endl;
+    cin >> anser;
+    page.info.mothers_mothers_name = anser;
+    
+    bool more_children_flag = true;
+    do{
+        cout << "Add child to family(Y/N)?"<< endl;
+        cin >> anser;
+        if(anser=='N' || anser=='n' || anser=="No" || anser=="no" || anser=="exit" || anser=="quit") 
+            {more_children_flag=false;}
+        else if((anser=='y' || anser=='Y' || anser=="yes" || anser=="Yes" || anser=="add")
+        {
+            cout << "Enter child's name."<< endl;
+            cin >> anser;
+            page.info.children_names.append(anser);
+        }
+    }while(more_children_flag);
+
+        
+    page.populate_page();
+    
+};
 //--------------------------------------------
 void AddEvent();
 //--------------------------------------------
