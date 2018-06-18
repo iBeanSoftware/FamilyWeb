@@ -38,6 +38,10 @@ struct MemberPage
        
     void populate_page()
     {
+        page.head.append("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">");
+        page.head.append("<meta name=\"Author\" content=\"iBeanSoftware FamilyWeb API\">");
+        page.head.append("<link rel=\"stylesheet\" type=\"text/css\" href=\"../FamilyWeb.css\">");
+
         page.head.append("<style> .image10p {width: 10%;}</style>");
            
         page.body.append("<h1>" + info.last_name+" "+info.sufix+", "+info.prefix+" "+info.first_name+" "+info.middle_name + "</h1>");  
@@ -74,6 +78,9 @@ struct EventPage
        WebPage page;
        void populate_page()
        {
+              page.head.append("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">");
+              page.head.append("<meta name=\"Author\" content=\"iBeanSoftware FamilyWeb API\">");
+              page.head.append("<link rel=\"stylesheet\" type=\"text/css\" href=\"../FamilyWeb.css\">");
               page.head.append("<style> .image10p {width: 10%;}</style>");
            
               page.body.append("<h1>" + info.member_name+" "+info.event_type + "</h1>");  
@@ -104,6 +111,9 @@ struct FamilyPage
        
        void populate_page()
        {
+        page.head.append("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">");
+        page.head.append("<meta name=\"Author\" content=\"iBeanSoftware FamilyWeb API\">");
+        page.head.append("<link rel=\"stylesheet\" type=\"text/css\" href=\"../FamilyWeb.css\">");
         page.head.append("<style> .image10p {width: 10%;}</style>");
            
         page.body.append("<h1>" + info.fathers_name+" & "+info.mothers_name+ "</h1>");  
