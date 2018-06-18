@@ -41,20 +41,26 @@ struct MemberPage
         page.head.append("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">");
         page.head.append("<meta name=\"Author\" content=\"iBeanSoftware FamilyWeb API\">");
         page.head.append("<link rel=\"stylesheet\" type=\"text/css\" href=\"../FamilyWeb.css\">");
-
-        page.head.append("<style> .image10p {width: 10%;}</style>");
            
         page.body.append("<h1>" + info.last_name+" "+info.sufix+", "+info.prefix+" "+info.first_name+" "+info.middle_name + "</h1>");  
         page.body.append("<h2> Parents </h2>");
+           
+        page.body.append("<div class=\"father-box\">");
         page.body.append("<p> Father: "+info.fathers_name +"</p>");
         page.body.append("<p> Mother: "+info.mothers_name +"</p>");
+        page.body.append("</div>");
+
         page.body.append("<p> </p>");
+        
+        page.body.append("<div class=\"father-box\">");
         page.body.append("<img class=\"image10p\" src=/""+ profile_pic_link +"\" alt=\"Member Image\">");
         page.body.append("<p>"+info.first_name+" "+info.middle_name+" "+info.last_name+" "+info.sufix+"</p>");  
         page.body.append("<p> Date of Birth: "+info.DoB+" </p>");
         page.body.append("<p> Place of Birth: "+info.birth_place+" </p>");
         page.body.append("<p> Date of Death: "+info.DoD+" </p>");
         page.body.append("<p> Place of Death: "+info.death_place+" </p>");
+        page.body.append("</div>");
+           
         page.body.append();
     };   
  //void init(){};
@@ -81,7 +87,6 @@ struct EventPage
               page.head.append("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">");
               page.head.append("<meta name=\"Author\" content=\"iBeanSoftware FamilyWeb API\">");
               page.head.append("<link rel=\"stylesheet\" type=\"text/css\" href=\"../FamilyWeb.css\">");
-              page.head.append("<style> .image10p {width: 10%;}</style>");
            
               page.body.append("<h1>" + info.member_name+" "+info.event_type + "</h1>");  
               page.body.append("<img class=\"image10p\" src=/""+ event_pic_link +"\" alt=\"Event Image\">");
@@ -114,27 +119,35 @@ struct FamilyPage
         page.head.append("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">");
         page.head.append("<meta name=\"Author\" content=\"iBeanSoftware FamilyWeb API\">");
         page.head.append("<link rel=\"stylesheet\" type=\"text/css\" href=\"../FamilyWeb.css\">");
-        page.head.append("<style> .image10p {width: 10%;}</style>");
            
         page.body.append("<h1>" + info.fathers_name+" & "+info.mothers_name+ "</h1>");  
         page.body.append("<img class=\"image10p\" src=/""+ profile_pic_link +"\" alt=\"Member Image\">");
         page.body.append("<p> </p>");
         page.body.append("<h2> Grand Parents </h2>");
+              
+        page.body.append("<div class=\"father-box\">");
         page.body.append("<p> Father's Father: "+info.fathers_fathers_name +"</p>");
         page.body.append("<p> Father's Mother: "+info.fathers_mothers_name +"</p>");
+        page.body.append("</div>");
+              
         page.body.append("<p> </p>");
+        page.body.append("<div class=\"mother-box\">");
         page.body.append("<p> Mother's Father: "+info.mothers_fathers_name +"</p>");
         page.body.append("<p> Mother's Mother: "+info.mothers_mothers_name +"</p>");
+        page.body.append("</div>");
         page.body.append("<p> </p>");
         page.body.append("<h2> Parents </h2>");
         page.body.append("<p> Father: "+info.fathers_name +"</p>");
         page.body.append("<p> Mother: "+info.mothers_name +"</p>");
         page.body.append("<p> </p>");
         page.body.append("<h2> Children </h2>");
+
+        page.body.append("<div class=\"father-box\">");
         for(int i=0; i<other_info.count; i++)
               {
               page.body.append("<p> "+children_names[i]+" </p>");
               }
+        page.body.append("</div>");
        };   
 
       //bool add_family_page(){};
