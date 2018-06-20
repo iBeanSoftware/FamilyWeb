@@ -5,7 +5,7 @@
 using namespace std;
 using namespace iBS;
 
-void MinuLoop();
+void MenuLoop();
 void AddPerson();
 void AddFamily();
 void AddEvent();
@@ -16,13 +16,13 @@ void BuildIndex();
 
 int main(int argc, char *argv[])
 {
-    MinuLoop();
+    MenuLoop();
   //  system("PAUSE");
     return EXIT_SUCCESS;
 }
 //--------------------------------------------
 
-void MinuLoop()
+void MenuLoop()
 {
   bool exit_flag = false;
   u8str anser = u8str(); // varible type found in iBS LIB in UTF-8_String.h included in WebMake.h
