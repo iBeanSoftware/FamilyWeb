@@ -8,12 +8,12 @@ Still under construction...
 
 Created files 
 
-WebMake.h - is a c++ header file that contains the base WebPage structure. Used as base web page structure.
-  - reusable base structure
+WebMake.h - c++ header file that contains the WebPage varible. 
+  - reusable varible that cantains a webpage. 
 
 FamilyWeb.h 
  - SurnameDir varable that contains surname and root path.
- Also the following structures each has an object from the above strut WebPage that will create the web pages for Family Web     Application:
+ Also the following structures each with WebPage varable.
  - IndexPage struct
  - MemberPage struct
  - EventPage struct
