@@ -20,7 +20,7 @@ FamilyWeb.h
  - FamilyPage struct
   
  	FamilyWeb.css - css style that will be used in each and every page.
-  FamilyWeb.js - Where be where any needed JavaScript will be.
+  FamilyWeb.js - File where any needed JavaScript will be.
   
   main.cpp - a start of a camand line program for testing base structures.
   
