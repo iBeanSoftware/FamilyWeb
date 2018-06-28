@@ -20,6 +20,15 @@ struct IndexPage
        iBS::u8text name_list;
 };
 
+struct BegotTree
+{
+       iBS::u8str file_path;
+       //format
+       // "FatherName" begot "SonName" at age ##
+       iBS::u8text name_list;
+       
+};
+
 struct MemberPage
 {
     struct MemberInfo
