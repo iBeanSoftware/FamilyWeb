@@ -73,7 +73,6 @@ struct MemberPage
         page.body.append();
     };   
  //void init(){};
- //bool add_member_page(){};
 };
 
 struct EventPage
@@ -158,7 +157,5 @@ struct FamilyPage
               }
         page.body.append("</div>");
        };   
-
-      //bool add_family_page(){};
 };
 
