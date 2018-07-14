@@ -180,7 +180,7 @@ struct FamilyTreePage
               
            page.body.append("<body onload=\"initialize()\">");
            page.body.append("<div id=\"header\">"+ sur_dir.surname +"</div>");
-           <div id="control_panel">
+      //     <div id="control_panel">
   /* todo...
     <div class="section">
         Control Panel
