@@ -49,7 +49,8 @@ struct MemberPage
     {
         page.head.append("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">");
         page.head.append("<meta name=\"Author\" content=\"iBeanSoftware FamilyWeb API\">");
-        page.head.append("<link rel=\"stylesheet\" type=\"text/css\" href=\"../FamilyWeb.css\">");
+        page.head.append("<link rel=\"stylesheet\" type=\"text/css\" href=\"FamilyWeb.css\">");
+        page.head.append("<script src=\"FamilyTree.js\"></script>");
            
         page.body.append("<h1>" + info.last_name+" "+info.sufix+", "+info.prefix+" "+info.first_name+" "+info.middle_name + "</h1>");  
         page.body.append("<h2> Parents </h2>");
@@ -94,7 +95,8 @@ struct EventPage
        {
               page.head.append("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">");
               page.head.append("<meta name=\"Author\" content=\"iBeanSoftware FamilyWeb API\">");
-              page.head.append("<link rel=\"stylesheet\" type=\"text/css\" href=\"../FamilyWeb.css\">");
+              page.head.append("<link rel=\"stylesheet\" type=\"text/css\" href=\"FamilyWeb.css\">");
+              page.head.append("<script src=\"FamilyTree.js\"></script>");
            
               page.body.append("<h1>" + info.member_name+" "+info.event_type + "</h1>");  
               page.body.append("<img class=\"image10p\" src=/""+ event_pic_link +"\" alt=\"Event Image\">");
@@ -126,7 +128,8 @@ struct FamilyPage
        {
         page.head.append("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">");
         page.head.append("<meta name=\"Author\" content=\"iBeanSoftware FamilyWeb API\">");
-        page.head.append("<link rel=\"stylesheet\" type=\"text/css\" href=\"../FamilyWeb.css\">");
+        page.head.append("<link rel=\"stylesheet\" type=\"text/css\" href=\"FamilyWeb.css\">");
+        page.head.append("<script src=\"FamilyTree.js\"></script>");
            
         page.body.append("<h1>" + info.fathers_name+" & "+info.mothers_name+ "</h1>");  
         page.body.append("<img class=\"image10p\" src=/""+ profile_pic_link +"\" alt=\"Member Image\">");
@@ -157,5 +160,58 @@ struct FamilyPage
               }
         page.body.append("</div>");
        };   
+       
+};
+//-------------------------------------------------------------------
+                        
+struct FamilyTreePage
+{
+       SurnameDir sur_dir;
+       WebPage page;
+
+       void populate_page()
+       {
+           page.head.append("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">");
+           page.head.append("<meta name=\"Author\" content=\"iBeanSoftware FamilyWeb API\">");
+           page.head.append("<link rel=\"stylesheet\" type=\"text/css\" href=\"FamilyWeb.css\">");
+           page.head.append("<script src=\"../ftree.js/tree.js\"></script>");
+           page.head.append("<script src=\"../ftree.js/main.js\"></script>");
+           page.head.append("<script src=\"FamilyTree.js\"></script>");
+              
+           page.body.append("<body onload=\"initialize()\">");
+           page.body.append("<div id=\"header\">"+ sur_dir.surname +"</div>");
+           <div id="control_panel">
+  /* todo...
+    <div class="section">
+        Control Panel
+    </div>
+    <button id="add_child">
+        Add Child
+    </button>
+    <button id="remove_node">
+        Remove Node
+    </button>
+    <button id="zoom_in">
+        Zoom In
+    </button>
+    <button id="zoom_out">
+        Zoom Out
+    </button>
+    <div class="section">
+        Information Panel
+    </div>
+    <div id="information_panel">
+
+    </div>
+</div>
+<div id="divider">
+
+</div>
+<div id="main">
+    <canvas id="canvas"></canvas>
+</div>
+           //*/
+       };
+       
 };
 
